@@ -1,0 +1,14 @@
+extends: default
+title-page:
+  text-align: center
+  font-color: aa00ed
+  authors:
+    font-color: aa00ed
+  title:
+    font-color: aa00ed
+  logo:
+    image: image:../../images/logo_paul_claudel.png[pdfwidth=30%]
+    top: 0
+    align: right
+  background-color: 210136
+  background-image: image:../../images/image_de_profile.png[pdfwidth=15%, position=top left, fit=none, align=inherit]

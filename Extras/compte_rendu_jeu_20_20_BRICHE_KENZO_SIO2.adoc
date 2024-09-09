@@ -1,0 +1,14 @@
+include::./.config/attributes/header_attributes.adoc[]
+
+= compte rendu du jeu 20 su 20
+:doctype: book
+:toc:
+:toc-title: table des matière
+:author: Briche Kenzo
+:sectnums:
+:version-label: v.
+:revdate: 09/09/2024
+:revnumber: 1
+:email: contact@kbriche.fr
+:pdf-theme: {theme_path_name}
+

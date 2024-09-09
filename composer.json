@@ -1,0 +1,10 @@
+{
+    "name": "kenzo/jeu_du_20_20",
+    "authors": [
+        {
+            "name": "Kenzo",
+            "email": "contact@kbriche.fr"
+        }
+    ],
+    "require": {}
+}

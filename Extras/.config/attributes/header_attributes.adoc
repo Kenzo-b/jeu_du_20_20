@@ -1,0 +1,4 @@
+:themes_path: ./.config/themes/
+:theme_name: custom_theme.yml
+:theme_path_name: {themes_path}{theme_name}
+
