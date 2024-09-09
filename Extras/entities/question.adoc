@@ -1,0 +1,35 @@
+= l'entitée "Question"
+
+l'entitée "question" contiendra les different champ defini si dessous :
+
+[%autowidth%header, cols="3*a", stripes=even]
+|===
+// ---- header ----
+^.^|Nom de la propriété
+^.^|type
+^.^|documentation
+// ---- td 3 ----
+|id
+|int\|null
+|identifiant de l’enregistrement correspondant en base de données (créé par le SGBDR)
+// ---- td 3 ----
+|level
+|int
+|niveau de la question compris entre 1 et 20
+// ---- td 3 ----
+|contentText
+|string
+|contenu textuel de la question
+// ---- td 3 ----
+|contentCode
+|string\|null
+|code source qui peut accompagner le texte de la question
+// ---- td 3 ----
+|contentImage
+|string\|null
+|nom de l’image qui peut accompagner le texte de la question
+// ---- t 32 ----
+|isToBeRevised
+|bool
+|permet de déterminer si la question doit être révisée ou non
+|===

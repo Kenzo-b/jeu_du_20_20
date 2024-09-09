@@ -1,0 +1,31 @@
+= L'entitée "Answer"
+
+l'entitée "answer" contiendra les different champ defini si dessous :
+
+[%autowidth%header, cols="3*a", stripes=even]
+|===
+// ---- header ----
+^.^|nom de la propriété
+^.^|type
+^.^| documentation
+// ---- td 3 ----
+|id
+| int\|null
+|identifiant de l’enregistrement correspondant en base de données (créé par le SGBDR)
+// ---- td 3 ----
+|contentText
+|string
+|contenu textuel de la question
+// ---- td 3 ----
+|contentCode
+|string\|null
+|code source qui peut accompagner le texte de la réponse
+// ---- td 3 ----
+|contentImage
+|string\|null
+|nom de l’image qui peut accompagner le texte de la réponse
+// ---- t 32 ----
+|isTrue
+|bool
+|indique si la réponse est une bonne réponse ou une mauvaise réponse
+|===

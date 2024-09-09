@@ -12,3 +12,10 @@ include::./.config/attributes/header_attributes.adoc[]
 :email: contact@kbriche.fr
 :pdf-theme: {theme_path_name}
 
+[[Les_Entitees]]
+== Les Entitées
+:leveloffset: +2
+
+include::entities/question.adoc[]
+
+include::entities/answers.asciidoc[]
