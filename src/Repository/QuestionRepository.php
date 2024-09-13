@@ -49,4 +49,8 @@ class QuestionRepository
         return array_rand($questionsAtLevel,1)[0];
     }
 
+    public function findRandomQuestionByDifficulty(int $difficulty): Question|string
+    {
+        return $this->getRandomQuestionByDifficulty($difficulty);
+    }
 }
