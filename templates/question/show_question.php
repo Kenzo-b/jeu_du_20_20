@@ -11,7 +11,7 @@
             <article>vous jouer pour la note de 1/20</article>
             <article>
                 <h2>question posée :</h2>
-                <p>qu'est-ce qu'un pointeur en c?</p>
+                <p><?= $question->getContentText() ?></p>
             </article>
             <article>question proposé le : 13-09-2024 13:46:06</article>
         </section>

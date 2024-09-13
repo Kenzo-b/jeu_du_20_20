@@ -43,14 +43,14 @@ class QuestionRepository
 
         $questionsAtLevel = [];
         foreach ($questions as $question) {
-            if (!in_array($question->getLevel() === $level, $questions)) throw new \Exception("il n'y a pas de question de niveau $level");
             if ($question->getLevel() === $level) ($questionsAtLevel[] = $question);
         }
-        return array_rand($questionsAtLevel,1)[0];
+        if (empty($questionsAtLevel)) throw new \Exception("aucune question pour le niveau $level");
+        return $questionsAtLevel[array_rand($questionsAtLevel,1)];
     }
 
     public function findRandomQuestionByDifficulty(int $difficulty): Question
     {
-        return $this->getRandomQuestionByDifficulty($difficulty);
+        return self::getRandomQuestionByDifficulty($difficulty);
     }
 }

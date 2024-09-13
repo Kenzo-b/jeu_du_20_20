@@ -6,12 +6,9 @@ use kenzo\Jeu20\Repository\QuestionRepository;
 
 class QuestionController {
     public function showSimpleQuestionTemp (int $difficulty) {
-        $params = [];
         $question = (new QuestionRepository())->findRandomQuestionByDifficulty($difficulty);
-        $params[] = $question;
-        ob_start();
+        $params = ['question' => $question];
         extract($params);
-        require_once '../templates/question/show_question.php';
-        return ob_get_clean();
+        require_once str_replace('\\','/', __dir__ . '/../../templates/question/show_question.php');
     }
 }
