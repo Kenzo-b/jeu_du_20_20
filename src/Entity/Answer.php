@@ -13,15 +13,15 @@ class Answer
      * @param string|null $contentImage
      * @param bool|null $isTrue
      * @param \DateTimeImmutable $createdAt
-     * @param \DateTimeImmutable|null $updatedAt
+     * @param \DateTimeImmutable|null $revisedAt
      */
     public function __construct(
-        private string $contentText,
-        private ?string $contentCode,
-        private ?string $contentImage,
-        private ?bool $isTrue,
-        private \DateTimeImmutable $createdAt,
-        private ?\DateTimeImmutable $updatedAt,
+        private string              $contentText,
+        private ?string             $contentCode,
+        private ?string             $contentImage,
+        private ?bool               $isTrue,
+        private \DateTimeImmutable  $createdAt,
+        private ?\DateTimeImmutable $revisedAt,
     ){}
 
     /**
@@ -115,8 +115,20 @@ class Answer
     /**
      * @return \DateTimeImmutable|null
      */
-    public function getUpdatedAt(): ?\DateTimeImmutable
+    public function getRevisedAt(): ?\DateTimeImmutable
     {
-        return $this->updatedAt;
+        return $this->revisedAt;
+    }
+
+    public function __toString(): string
+    {
+        $output = "ID: " . ($this->id ?? 'null') . "<br>";
+        $output .= "Content Text: {$this->contentText}<br>";
+        $output .= "Content Code: " . ($this->contentCode ?? "null") . "<br>";
+        $output .= "Content Image: " . ($this->contentImage ?? "null") . "<br>";
+        $output .= "isToBeRevised: " . ($this->isTrue ? "true" : "false") . "<br>";
+        $output .= "Created At: {$this->createdAt->format('Y-m-d H:i:s')}<br>";
+        $output .= "Updated At: " . ($this->revisedAt ?? 'null') . "<br>";
+        return $output;
     }
 }

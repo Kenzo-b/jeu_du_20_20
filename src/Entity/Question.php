@@ -22,7 +22,7 @@ class Question {
         private ?string $contentImage,
         private bool $isToBeRevised,
         private \DateTimeImmutable $createdAt,
-        private ?\DateTimeImmutable $updatedAt
+        private ?\DateTimeImmutable $revisedAt
     ){}
 
     /**
@@ -134,8 +134,21 @@ class Question {
     /**
      * @return \DateTimeImmutable|null
      */
-    public function getUpdatedAt(): ?\DateTimeImmutable
+    public function getRevisedAt(): ?\DateTimeImmutable
     {
-        return $this->updatedAt;
+        return $this->revisedAt;
+    }
+
+    public function __toString(): string
+    {
+        $output = "ID: " . ($this->id ?? 'null') . "<br>";
+        $output .= "Level: " . ($this->level) . "<br>";
+        $output .= "Content Text: {$this->contentText}<br>";
+        $output .= "Content Code: " . ($this->contentCode ?? "null") . "<br>";
+        $output .= "Content Image: " . ($this->contentImage ?? "null") . "<br>";
+        $output .= "isToBeRevised: " . ($this->isToBeRevised ? "true" : "false") . "<br>";
+        $output .= "Created At: {$this->createdAt->format('Y-m-d H:i:s')}<br>";
+        $output .= "Updated At: " . ($this->revisedAt ?? 'null') . "<br>";
+        return $output;
     }
 }
