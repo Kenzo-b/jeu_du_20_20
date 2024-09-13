@@ -1,6 +1,6 @@
 <?php
 
-namespace kenzo\Entity;
+namespace kenzo\Jeu20\Entity;
 
 class Answer
 {
