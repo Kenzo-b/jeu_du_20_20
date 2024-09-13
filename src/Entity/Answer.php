@@ -5,24 +5,13 @@ namespace kenzo\Jeu20\Entity;
 class Answer
 {
     private ?int $id = null;
+    private string $contentText;
+    private ?string $contentCode = null;
+    private ?string $contentImage = null;
+    private ?bool $isTrue = false;
+    private \DateTimeImmutable $createdAt;
+    private ?\DateTimeImmutable $revisedAt = null;
 
-
-    /**
-     * @param string $contentText
-     * @param string|null $contentCode
-     * @param string|null $contentImage
-     * @param bool|null $isTrue
-     * @param \DateTimeImmutable $createdAt
-     * @param \DateTimeImmutable|null $revisedAt
-     */
-    public function __construct(
-        private string              $contentText,
-        private ?string             $contentCode,
-        private ?string             $contentImage,
-        private ?bool               $isTrue,
-        private \DateTimeImmutable  $createdAt,
-        private ?\DateTimeImmutable $revisedAt,
-    ){}
 
     /**
      * @return string
@@ -113,6 +102,16 @@ class Answer
     }
 
     /**
+     * @param \DateTimeImmutable $createdAt
+     * @return $this
+     */
+    public function setCreatedAt(\DateTimeImmutable $createdAt): Answer
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
      * @return \DateTimeImmutable|null
      */
     public function getRevisedAt(): ?\DateTimeImmutable
@@ -120,15 +119,25 @@ class Answer
         return $this->revisedAt;
     }
 
+    /**
+     * @param \DateTimeImmutable|null $revisedAt
+     * @return $this
+     */
+    public function setRevisedAt(?\DateTimeImmutable $revisedAt): Answer
+    {
+        $this->revisedAt = $revisedAt;
+        return $this;
+    }
+
     public function __toString(): string
     {
-        $output = "ID: " . ($this->id ?? 'null') . "<br>";
-        $output .= "Content Text: {$this->contentText}<br>";
-        $output .= "Content Code: " . ($this->contentCode ?? "null") . "<br>";
-        $output .= "Content Image: " . ($this->contentImage ?? "null") . "<br>";
-        $output .= "isToBeRevised: " . ($this->isTrue ? "true" : "false") . "<br>";
-        $output .= "Created At: {$this->createdAt->format('Y-m-d H:i:s')}<br>";
-        $output .= "Updated At: " . ($this->revisedAt ?? 'null') . "<br>";
-        return $output;
+        $output = "ID: " . ($this->id ?? 'null') . "\n";
+        $output .= "Content Text: {$this->contentText}\n";
+        $output .= "Content Code: " . ($this->contentCode ?? "null") . "\n";
+        $output .= "Content Image: " . ($this->contentImage ?? "null") . "\n";
+        $output .= "isToBeRevised: " . ($this->isTrue ? "true" : "false") . "\n";
+        $output .= "Created At: {$this->createdAt->format('Y-m-d H:i:s')}\n";
+        $output .= "Updated At: " . ($this->revisedAt ?? 'null') . "\n";
+        return nl2br($output);
     }
 }

@@ -5,7 +5,13 @@ namespace kenzo\Jeu20\Entity;
 class Question {
 
     private ?int $id = null;
-
+    private int $level;
+    private string $contentText;
+    private ?string $contentCode;
+    private ?string $contentImage;
+    private bool $isToBeRevised;
+    private \DateTimeImmutable $createdAt;
+    private ?\DateTimeImmutable $revisedAt;
     /**
      * @param int $level
      * @param string $contentText
@@ -16,13 +22,7 @@ class Question {
      * @param \DateTimeImmutable|null $updatedAt
      */
     public function __construct(
-        private int $level,
-        private string $contentText,
-        private ?string $contentCode,
-        private ?string $contentImage,
-        private bool $isToBeRevised,
-        private \DateTimeImmutable $createdAt,
-        private ?\DateTimeImmutable $revisedAt
+
     ){}
 
     /**
@@ -124,11 +124,31 @@ class Question {
     }
 
     /**
+     * @param \DateTimeImmutable $createdAt
+     * @return $this
+     */
+    public function setCreatedAt(\DateTimeImmutable $createdAt): Question
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
      * @return \DateTimeImmutable
      */
     public function getCreatedAt(): \DateTimeImmutable
     {
         return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTimeImmutable|null $revisedAt
+     * @return $this
+     */
+    public function setRevisedAt(?\DateTimeImmutable $revisedAt): Question
+    {
+        $this->revisedAt = $revisedAt;
+        return $this;
     }
 
     /**
