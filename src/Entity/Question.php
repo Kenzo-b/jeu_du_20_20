@@ -12,13 +12,17 @@ class Question {
      * @param string|null $contentCode
      * @param string|null $contentImage
      * @param bool $isToBeRevised
+     * @param \DateTimeImmutable $createdAt
+     * @param \DateTimeImmutable|null $updatedAt
      */
     public function __construct(
         private int $level,
         private string $contentText,
         private ?string $contentCode,
         private ?string $contentImage,
-        private bool $isToBeRevised
+        private bool $isToBeRevised,
+        private \DateTimeImmutable $createdAt,
+        private ?\DateTimeImmutable $updatedAt
     ){}
 
     /**
@@ -117,5 +121,21 @@ class Question {
     public function getId(): int
     {
         return $this->id;
+    }
+
+    /**
+     * @return \DateTimeImmutable
+     */
+    public function getCreatedAt(): \DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return \DateTimeImmutable|null
+     */
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
     }
 }

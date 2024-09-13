@@ -6,11 +6,22 @@ class Answer
 {
     private ?int $id = null;
 
+
+    /**
+     * @param string $contentText
+     * @param string|null $contentCode
+     * @param string|null $contentImage
+     * @param bool|null $isTrue
+     * @param \DateTimeImmutable $createdAt
+     * @param \DateTimeImmutable|null $updatedAt
+     */
     public function __construct(
         private string $contentText,
         private ?string $contentCode,
         private ?string $contentImage,
-        private ?bool $isTrue
+        private ?bool $isTrue,
+        private \DateTimeImmutable $createdAt,
+        private ?\DateTimeImmutable $updatedAt,
     ){}
 
     /**
@@ -91,5 +102,21 @@ class Answer
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @return \DateTimeImmutable
+     */
+    public function getCreatedAt(): \DateTimeImmutable
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return \DateTimeImmutable|null
+     */
+    public function getUpdatedAt(): ?\DateTimeImmutable
+    {
+        return $this->updatedAt;
     }
 }
