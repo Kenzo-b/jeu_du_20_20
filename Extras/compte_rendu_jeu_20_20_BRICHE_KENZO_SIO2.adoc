@@ -13,9 +13,18 @@ include::./.config/attributes/header_attributes.adoc[]
 :pdf-theme: {theme_path_name}
 
 [[Les_Entitees]]
-== Les Entitées
-:leveloffset: +2
+== Les premières Entitées
 
-include::entities/question.adoc[]
 
-include::entities/answers.asciidoc[]
+include::entities/question.adoc[leveloffset=+2]
+
+include::entities/answers.asciidoc[leveloffset=+2]
+
+[[Les_Premiers_commits_et_branches]]
+== Les Premiers commits et branches
+
+voici un le premier commit de la branche "chapter/create-entities", qui est une branche enfant de la branche "dev" :
+
+image::images/20_log_commit_and_branch.png[]
+
+//debut chapitre MVC 11h34
