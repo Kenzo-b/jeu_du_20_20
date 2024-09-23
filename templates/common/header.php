@@ -1,6 +1,1 @@
-<?php
-/**
- * @var \kenzo\Jeu20\Entity\Question $question
- */
-?>
-<h2>Vous jouez pour la note de <span><?php echo $question->getLevel()? $question->getLevel() : ''?></span>/20</h2>
+<h1>jeu du 20/20</h1>
