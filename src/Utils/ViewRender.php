@@ -8,6 +8,8 @@ class ViewRender
     public const string VIEW_DEFINITIONS_DIRECTORY_PATH = '/../../viewDefinitions/';
     public const string CSS_DIRECTORY_PATH = '../assets/css/';
 
+    public const string JS_DIRECTORY_PATH = '../assets/js/';
+
     private static array $data = [];
 
     public static function setData(array $data):void
@@ -52,5 +54,10 @@ class ViewRender
     private static function buildPathToCssFilename(string $cssFilename): string
     {
         return self::CSS_DIRECTORY_PATH.$cssFilename.'.css';
+    }
+
+    private static function buildPathToJsFilename(string $jsFilename): string
+    {
+        return self::JS_DIRECTORY_PATH.$jsFilename.'.js';
     }
 }
