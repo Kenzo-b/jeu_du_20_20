@@ -8,5 +8,7 @@ class BaseController
         string $viewDefinition,
         array $data = []
     ): void {
+        extract($data);
+        include __DIR__.'/../../viewDefinitions/'.$viewDefinition.'.php';
     }
 }
