@@ -14,6 +14,7 @@ class BaseController
 
     public static function renderFromViewDefinition(string $viewDefinition, $data = []): void
     {
+        ViewRender::setData($data);
         ViewRender::renderFromViewDefinition($viewDefinition);
     }
 }

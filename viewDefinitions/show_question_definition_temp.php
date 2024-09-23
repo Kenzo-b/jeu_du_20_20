@@ -1,13 +1,7 @@
 <?php
-$cssFiles = '<link type="text/css" rel="stylesheet" href="../assets/css/style.css" />';
-$jsFiles = '<script src="../assets/js/alert.js"></script>';
-ob_start();
-include __DIR__.'/../templates/common/header.php';
-$view_header = ob_get_clean();
-ob_start();
-include __DIR__.'/../templates/common/footer.php';
-$view_footer = ob_get_clean();
-ob_start();
-include __DIR__.'/../templates/question/new_show_question.php';
-$view_main = ob_get_clean();
-include __DIR__.'/../templates/base.php';
+use kenzo\Jeu20\Utils\ViewRender;
+
+$view_header = ViewRender::getContentView("common/header");
+$view_main = ViewRender::getContentView("question/new_show_question");
+$view_footer = ViewRender::getContentView("common/footer");
+include ViewRender::getValidatedViewPath('base');
