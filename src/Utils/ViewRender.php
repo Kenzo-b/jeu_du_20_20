@@ -6,6 +6,7 @@ class ViewRender
 {
     public const string VIEW_DIRECTORY_PATH = '/../../templates/';
     public const string VIEW_DEFINITIONS_DIRECTORY_PATH = '/../../viewDefinitions/';
+    public const string CSS_DIRECTORY_PATH = '../assets/css/';
 
     private static array $data = [];
 
@@ -46,5 +47,10 @@ class ViewRender
         ob_start();
         include $viewPath;
         return ob_get_clean();
+    }
+
+    private static function buildPathToCssFilename(string $cssFilename): string
+    {
+        return self::CSS_DIRECTORY_PATH.$cssFilename.'.css';
     }
 }
