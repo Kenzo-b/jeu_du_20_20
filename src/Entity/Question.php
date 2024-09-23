@@ -12,18 +12,10 @@ class Question {
     private bool $isToBeRevised;
     private \DateTimeImmutable $createdAt;
     private ?\DateTimeImmutable $revisedAt;
-    /**
-     * @param int $level
-     * @param string $contentText
-     * @param string|null $contentCode
-     * @param string|null $contentImage
-     * @param bool $isToBeRevised
-     * @param \DateTimeImmutable $createdAt
-     * @param \DateTimeImmutable|null $updatedAt
-     */
-    public function __construct(
 
-    ){}
+    private array $Answers;
+
+    public function __construct(){}
 
     /**
      * @return int
@@ -157,6 +149,54 @@ class Question {
     public function getRevisedAt(): ?\DateTimeImmutable
     {
         return $this->revisedAt;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAnswers(): array
+    {
+        return $this->Answers;
+    }
+
+    /**
+     * @param array $Answers
+     * @return Question
+     */
+    public function setAnswers(array $Answers): Question
+    {
+        foreach ($Answers as $Answer) {
+            if (!$Answer instanceof Answer) {
+                throw new \InvalidArgumentException($Answer . ' must be an instance of Answer, got ' . gettype($Answer) . 'instead');
+            }
+        }
+        $this->Answers = $Answers;
+        return $this;
+    }
+
+    /**
+     * @param Answer $Answer
+     * @return Question
+     */
+    public function addAnswer(Answer $Answer): Question
+    {
+        if (!in_array($Answer, $this->Answers, true)) {
+            $this->Answers[] = $Answer;
+        }
+        return $this;
+    }
+
+    /**
+     * @param Answer $Answer
+     * @return Question
+     */
+    public function removeAnswer(Answer $Answer): Question
+    {
+        $key = array_search($Answer, $this->Answers, true);
+        if ($key !== false) {
+            unset($this->Answers[$key]);
+        }
+        return $this;
     }
 
     public function __toString(): string
