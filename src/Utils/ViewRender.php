@@ -60,4 +60,24 @@ class ViewRender
     {
         return self::JS_DIRECTORY_PATH.$jsFilename.'.js';
     }
+
+    public static function getCssLinks(array $filesCss): string
+    {
+        $cssLinks = "";
+        foreach ($filesCss as $filename) {
+            $cssPath = self::buildPathToCssFilename($filename);
+            $cssLinks .= "\n".'<link rel="stylesheet" href="'.$cssPath.'">'."\n";
+        }
+        return $cssLinks;
+    }
+
+    public static function getJsScripts(array $filesJs): string
+    {
+        $jsScripts = "";
+        foreach ($filesJs as $filename) {
+            $jsPath = self::buildPathToJsFilename($filename);
+            $jsScripts .= "\n" . '<script src="' . $jsPath . '" defer></script>' . "\n";
+        }
+        return $jsScripts;
+    }
 }
