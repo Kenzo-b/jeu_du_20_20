@@ -15,7 +15,7 @@ class ViewRender
         return $viewDefinitionToCheck;
     }
 
-    public static function renderFromViewDefinition(string $viewDefinition, $data = []): void
+    public static function renderFromViewDefinition(string $viewDefinition): void
     {
         $viewDefinitionPath = self::getValidatedViewDefinitionPath($viewDefinition);
         include $viewDefinitionPath;
