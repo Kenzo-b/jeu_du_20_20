@@ -2,9 +2,9 @@
 
 namespace kenzo\Jeu20\Entity;
 
-class Question {
-
-    private ?int $id = null;
+class Question extends baseEntity
+{
+    private readonly ?int $id;
     private int $level;
     private string $contentText;
     private ?string $contentCode;
@@ -14,8 +14,6 @@ class Question {
     private ?\DateTimeImmutable $revisedAt;
 
     private array $Answers;
-
-    public function __construct(){}
 
     /**
      * @return int
@@ -116,6 +114,16 @@ class Question {
     }
 
     /**
+     * @param int $id
+     * @return $this
+     */
+    public function setId(int $id): Question
+    {
+        $this->id = $id;
+        return $this;
+    }
+
+    /**
      * @param \DateTimeImmutable $createdAt
      * @return $this
      */
@@ -165,39 +173,44 @@ class Question {
      */
     public function setAnswers(array $Answers): Question
     {
+        $trueAnswers = 0;
         foreach ($Answers as $Answer) {
             if (!$Answer instanceof Answer) {
                 throw new \InvalidArgumentException($Answer . ' must be an instance of Answer, got ' . gettype($Answer) . 'instead');
             }
+            if ($Answer->getIsTrue()) $trueAnswers++;
         }
+        if ($trueAnswers !== 1) throw new \InvalidArgumentException('A question should have 1 true answer, got' . $trueAnswers . ' answer');
+        if (count($Answers) !== 4) throw new \InvalidArgumentException('$Answers must be 4 elements, got ' . count($Answers) . 'instead');
         $this->Answers = $Answers;
         return $this;
     }
 
-    /**
-     * @param Answer $Answer
-     * @return Question
-     */
-    public function addAnswer(Answer $Answer): Question
+    public static function hydrateAllWithAnswers(array $stmtArray): array
     {
-        if (!in_array($Answer, $this->Answers, true)) {
-            $this->Answers[] = $Answer;
+
+        $questions = [];
+        $question = null;
+        $answersTab = [];
+
+        foreach ($stmtArray as $stmtRow) {
+            if ($question === null || $question->getId() !== $stmtRow->question_id) {
+                if ($question !== null) {
+                    $question->setAnswers($answersTab);
+                    $questions[] = $question;
+                }
+                $question = Question::hydrate($stmtRow);
+                $answersTab = [];
+            }
+            $answersTab[] = Answer::hydrate($stmtRow);
         }
-        return $this;
+        if ($question !== null) {
+            $question->setAnswers($answersTab);
+            $questions[] = $question;
+        }
+        return $questions;
     }
 
-    /**
-     * @param Answer $Answer
-     * @return Question
-     */
-    public function removeAnswer(Answer $Answer): Question
-    {
-        $key = array_search($Answer, $this->Answers, true);
-        if ($key !== false) {
-            unset($this->Answers[$key]);
-        }
-        return $this;
-    }
 
     public function __toString(): string
     {

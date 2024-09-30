@@ -2,9 +2,9 @@
 
 namespace kenzo\Jeu20\Entity;
 
-class Answer
+class Answer extends baseEntity
 {
-    private ?int $id = null;
+    private readonly ?int $id;
     private string $contentText;
     private ?string $contentCode = null;
     private ?string $contentImage = null;
@@ -12,6 +12,23 @@ class Answer
     private \DateTimeImmutable $createdAt;
     private ?\DateTimeImmutable $revisedAt = null;
 
+    /**
+     * @return int|null
+     */
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int|null $id
+     * @return $this
+     */
+    public function setId(?int $id): Answer
+    {
+        $this->id = $id;
+        return $this;
+    }
 
     /**
      * @return string
@@ -83,14 +100,6 @@ class Answer
     {
         $this->isTrue = $isTrue;
         return $this;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getId(): ?int
-    {
-        return $this->id;
     }
 
     /**
