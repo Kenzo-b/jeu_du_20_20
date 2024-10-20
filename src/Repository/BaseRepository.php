@@ -26,19 +26,8 @@ abstract class BaseRepository
         }
     }
 
-    /**
-     * Méthode générique findAll qui renvoie tous les enregistrements sous forme d'objets
-     * @param string $className Le nom de la classe qui représente la table (Question::class par exemple)
-     * @return array Tableau d'objets de la classe donnée
-     */
-    public function findAll(string $className): array {
-        $objectArray = [];
-        $table = classNameToDBTable($className);
-        $this->pdoStatement = $this->pdo->prepare("SELECT * FROM :table");
-        $this->pdoStatement->bindValue('table', $table);
-        $this->pdoStatement->execute();
-        $stmtArray = $this->pdoStatement->fetchAll(\PDO::FETCH_OBJ);
-        $this->hydrateAll($stmtArray, $className);
-        return $objectArray;
+    public static function connect(): static
+    {
+        return new static();
     }
 }

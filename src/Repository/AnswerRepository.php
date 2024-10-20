@@ -9,16 +9,20 @@ class AnswerRepository extends BaseRepository
 {
     private function getAnswersByQuestionId(int $questionId): array
     {
-        $answers = [];
         $this->pdoStatement = $this->pdo->prepare("SELECT * FROM answers WHERE 'question_id' = :questionId");
-        $this->pdoStatement->bindParam(':questionId', $questionId);
+        $this->pdoStatement->bindValue(':questionId', $questionId, PDO::PARAM_INT);
         $this->pdoStatement->execute();
         $fetchedAnswers = $this->pdoStatement->fetchAll(\PDO::FETCH_OBJ);
+        return Answer::hydrateAll($fetchedAnswers);
+    }
 
-        foreach ($fetchedAnswers as $fetchedAnswer) {
-            $answers[] = Answer::hydrate($fetchedAnswer);;
-        }
-        return $answers;
+    public function getAnswerById(int $answerId): ?Answer
+    {
+        $this->pdoStatement = $this->pdo->prepare("SELECT * FROM answers WHERE id = :answerId");
+        $this->pdoStatement->bindValue(':answerId', $answerId, \PDO::PARAM_INT);
+        $this->pdoStatement->execute();
+        $fetchedAnswer = $this->pdoStatement->fetch(\PDO::FETCH_OBJ);
+        return Answer::hydrate($fetchedAnswer);
     }
 
     public function findAnswersByQuestionId(int $questionId): array

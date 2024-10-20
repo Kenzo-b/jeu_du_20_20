@@ -1,0 +1,81 @@
+"id","level","content_text","content_code","content_image","is_to_be_revised","created_at","revised_at"
+"1","1","Quelle est la différence entre une boucle ""for"" et ""while"" ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"2","1","Qu'est-ce qu'une variable en programmation ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"3","1","Qu'est-ce qu'un ""bit"" en informatique ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"4","1","Qu'est-ce qu'une extension de fichier ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"5","2","Qu'est-ce qu'un objet en programmation orientée objet ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"6","2","Que signifie RAM ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"7","2","Qu'est-ce qu'un système d'exploitation (OS) ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"8","2","Quel langage est principalement utilisé pour structurer des documents web ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"9","3","Qu'est-ce que la loi de Moore ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"10","3","Que signifie PHP ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"11","3","Que signifie CSS en développement web ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"12","3","Quelle est la fonction principale d'une carte graphique ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"13","4","Lequel de ces protocoles est utilisé pour envoyer des emails ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"14","4","À quoi sert un ""framework"" en développement logiciel ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"15","4","Lequel de ses langages est compilé ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"16","4","Qu'est-ce qu'un pointeur?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"17","5","Quel est le rôle d'une interface en programmation orientée objet ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"18","5","Quelle est la fonction de ""git merge"" ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"19","5","Combien de bits il y a dans un octet ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"20","5","Que fait la commande 'rm' sous Linux ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"21","6","Que signifie JSON en informatique ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"22","6","Laquelle de ces réponses est un paradigme de programmation ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"23","6","Quel type de variable n'existe pas en C# ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"24","6","Quelle est la différence entre TCP et UDP ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"25","7","Que veut dire JWT ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"26","7","Qu'est-ce qu'une API ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"27","7","À quelle classe réseau appartient cette plage d'adressage IP : 224.0.0.0 à 239.255.255.255 ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"28","7","Que signifie l'acronyme ""SQL"" ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"29","8","Quelle est la fonction principale du DNS (Domain Name System) ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"30","8","Que signifie l'acronyme XML ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"31","8","Qu'est-ce que le cross-site scripting (XSS) ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"32","8","Qu'elle est la différence entre une méthode et une fonction ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"33","9","Qu'est-ce qu'une table de hachage ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"34","9","Qu'est-ce qu'une clé primaire en base de données ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"35","9","Qu'est-ce qu'un reverse shell ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"36","9","Que signifie l'acronyme RCE ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"37","10","Quelle est la portée d'une variable globale en programmation ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"38","10","Qu'est-ce que la stéganographie ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"39","10","Qu'est-ce qu'un appel récursif ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"40","10","Dans le modèle OSI, quel est le niveau 5 ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"41","11","Quelle est la principale fonction de l'API REST ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"42","11","De quelle Systeme linux est derivée Hannah Montana OS ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"43","11","En programmation, que signifie refactoring ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"44","11","Quelle est la principale vulnérabilité exploitée dans une attaque par injection SQL ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"45","12","Qu'est-ce qu'un scrapper ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"46","12","Qu'elle est la différence entre une pile (stack) et une file (queue) ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"47","12","Q'est-ce que graphQL ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"48","12","Que signifie SaaS dans le contexte du cloud computing ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"49","13","Qu'est-ce qui distingue principalement un processus d'un thread en informatique ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"50","13","Qu'est-ce qu'une CVE ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"51","13","Quel est le but de l'algorithme de compression Huffman ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"52","13","Quelle est la différence entre la surcouche et la sous-couche réseau dans le modèle OSI ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"53","14","Qu'est qu'une raimbow table?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"54","14","Qu'est-ce qu'une LFI ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"55","14","Qu'est-ce qu'un context manager en python ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"56","14","Quelle est la sortie d'une porte logique XOR qui a pour entrée 0 et 1 ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"57","15","Qu'est-ce qu'un dump ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"58","15","Que signifie l'acronyme SSTI ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"59","15","A quoi sert le mot clef Yield en programmation ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"60","15","Qu'est-ce qu'une liste chaînée ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"61","16","Quel est le principe de fonctionnement d'un algorithme de tri par fusion (merge sort) ",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"62","16","A quoi correspond Kerberos ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"63","16","Que signifie ""mb4"" dans le nom de l'encodage utf8mb4 ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"64","16","Qu'est-ce qu'une injection de dépendances en développement logiciel ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"65","17","Qu'est-ce qu'un buffer overflow ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"66","17","Quel est le rôle d'un serveur reverse proxy ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"67","17","A quoi correspond l'hardening?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"68","17","Quelle est la principale différence entre le chiffrement symétrique et le chiffrement asymétrique ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"69","18","Qu'est-ce que elf x86?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"70","18","Que signifie le terme sharding dans le domaine des bases de données distribuées ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"71","18","Quelle est la principale utilisation des expressions régulières ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"72","18","Laquelle de ces commande nmap permet de scanner tout les port d'une machine en mode Xmas?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"73","19","Qu'est-ce que le process hollowing?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"74","19","Lors de la mise en œuvre du protocole Diffie-Hellman pour l'échange de clés, quelle vulnérabilité peut survenir si le processus n'est pas correctement sécurisé, même si l'algorithme est théoriquement sûr ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"75","19","Dans une architecture de microservices, quel est le principal défi associé à la gestion de l'état (state management) entre plusieurs services ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"76","19","Qui a co-fondé Microsoft en 1975 et est également connu pour sa contribution à l'émergence de l'industrie des logiciels personnels ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"77","20","Quelle est la difference entre netcat et socat?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"78","20","Quel est le rôle d'un load balancer (répartiteur de charge) dans un environnement de serveurs ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"79","20","Dans le cadre d'une attaque de type ""Cold Boot Attack"", quelle est la méthode principale exploitée pour extraire des clés de chiffrement stockées dans la mémoire vive (RAM) d'un ordinateur ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL
+"80","20","Quel est le sens de la vie ?",NULL,NULL,"0","2024-09-30 16:39:18",NULL

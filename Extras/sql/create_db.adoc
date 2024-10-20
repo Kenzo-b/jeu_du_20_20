@@ -1,0 +1,4 @@
+[source, sql]
+----
+CREATE DATABASE IF NOT EXISTS `jeu_du_20_20` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+----

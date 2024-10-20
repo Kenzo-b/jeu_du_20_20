@@ -4,11 +4,11 @@ namespace kenzo\Jeu20\utils;
 
 class ViewRender
 {
-    public const string VIEW_DIRECTORY_PATH = '/../../templates/';
-    public const string VIEW_DEFINITIONS_DIRECTORY_PATH = '/../../viewDefinitions/';
-    public const string CSS_DIRECTORY_PATH = '../assets/css/';
+    public const VIEW_DIRECTORY_PATH = '/../../templates/';
+    public const VIEW_DEFINITIONS_DIRECTORY_PATH = '/../../viewDefinitions/';
+    public const CSS_DIRECTORY_PATH = '../assets/css/';
 
-    public const string JS_DIRECTORY_PATH = '../assets/js/';
+    public const JS_DIRECTORY_PATH = '../assets/js/';
 
     private static array $data = [];
 

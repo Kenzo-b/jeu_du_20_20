@@ -211,7 +211,6 @@ class Question extends baseEntity
         return $questions;
     }
 
-
     public function __toString(): string
     {
         $output = "ID: " . ($this->id ?? 'null') . "<br>";

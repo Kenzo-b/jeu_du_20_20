@@ -8,4 +8,6 @@ require_once '../src/Utils/autoloaders.php';
 
 spl_autoload_register('kenzo\Jeu20\Utils\myAutoloadingWithPrefix');
 
-(new QuestionController())->showSimpleQuestionTemp(1);
+define("BASE_VIEW_PATH", dirname(__DIR__) . DIRECTORY_SEPARATOR . 'templates' . DIRECTORY_SEPARATOR);
+
+(new QuestionController())->showSimpleQuestion(1);

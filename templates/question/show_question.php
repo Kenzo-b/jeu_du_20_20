@@ -1,24 +1,23 @@
-<html lang="fr">
-    <head>
-        <title>jeu du 20/20</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <header>
-            <h1>jeu du 20/20</h1>
-        </header>
-        <section>
-            <article>vous jouer pour la note de 1/20</article>
-            <article>
-                <h2>question posée :</h2>
-                <p><?= $question->getContentText() ?></p>
-            </article>
-            <article>question proposé le : 13-09-2024 13:46:06</article>
-        </section>
-        <footer>
-            2024 - Briche Kenzo
-        </footer>
-    </body>
-</html>
+<?php
+/**
+ * @var kenzo\Jeu20\Entity\Question $question
+ */
+?>
+<h1>jeu du 20/20</h1>
+<section>
+    <header>
+        <h2>Vous jouez pour la note de <span><?php echo $question->getLevel(); ?></span>/20</h2>
+    </header>
 
-
+    <article>vous jouer pour la note de 1/20</article>
+    <article>
+        <h3>Question posée :</h3>
+        <div><?php echo htmlspecialchars($question->getContentText()) ?></div>
+    </article>
+    <article>
+        <p>Question proposée le : </p>
+    </article>
+</section>
+<footer>
+    2024 - Briche Kenzo
+</footer>

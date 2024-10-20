@@ -1,0 +1,14 @@
+[source, sql]
+----
+CREATE TABLE question (
+id int(11) NOT NULL COMMENT 'identifiant',
+content_text text NOT NULL COMMENT 'contenu de la question',
+content_code text DEFAULT NULL COMMENT 'code pouvant accompagner une
+question',
+content_image varchar(200) DEFAULT NULL COMMENT 'fichier image pouvant
+accompagner la question',
+is_to_be_revised tinyint(1) NOT NULL COMMENT 'true si la question doit être révisée',
+created_at datetime NOT NULL COMMENT 'date et heure de création de la question',
+revised_at datetime DEFAULT NULL COMMENT 'date de dernière révision de laquestion',PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4
+----

@@ -1,0 +1,18 @@
+[source, sql]
+----
+CREATE TABLE answer (
+id int(11) NOT NULL AUTO_INCREMENT COMMENT 'identifiant',
+content_text text NOT NULL COMMENT 'contenu de la réponse',
+content_code text DEFAULT NULL COMMENT 'code source pouvant accompagner la
+réponse',
+content_image smallint(6) DEFAULT NULL COMMENT 'fichier image pouvant
+accompagner la réponse',
+is_true tinyint(1) NOT NULL COMMENT 'true si la réponse est une bonne
+réponse à la question associée ',
+created_at datetime NOT NULL COMMENT 'date et heure de création de la
+réponse',
+revised_at datetime DEFAULT NULL COMMENT 'date de la dernière révision de
+la réponse',
+PRIMARY KEY (id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+----
